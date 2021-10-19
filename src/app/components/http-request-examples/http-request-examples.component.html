@@ -1,0 +1,28 @@
+<div class="cat-fact-container" *ngIf="catFact$ | async as catImage">
+  <h2>Fact</h2>
+  {{ catImage.fact }}
+  <h3>Length</h3>
+  {{ catImage.length }}
+</div>
+
+<div
+  class="dog-image-container"
+  *ngIf="eenmaligeDogImage$ | async as eenmaligeDogImage"
+>
+  <h3>Eenmalige dog-image status: {{ eenmaligeDogImage.status }}</h3>
+  <br />
+  <img class="dog-image" [src]="eenmaligeDogImage.message" />
+</div>
+
+<div
+  class="dog-image-container"
+  *ngIf="refreshableDogImage$ | async as refreshableDogImage"
+>
+  <h3>Refreshable dog-image status: {{ refreshableDogImage.status }}</h3>
+  <br />
+  <img class="dog-image" [src]="refreshableDogImage.message" />
+  <br />
+  <button (click)="haalEenNieuweDogImageOp()">
+    Trigger request opnieuw, zonder pagina te verversen
+  </button>
+</div>
