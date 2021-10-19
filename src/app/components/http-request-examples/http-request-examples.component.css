@@ -1,0 +1,11 @@
+.cat-fact-container {
+  background-color: bisque;
+}
+.dog-image-container {
+  margin-top: 20px;
+  background-color: cornsilk;
+}
+.dog-image {
+  max-width: 200px;
+  max-height: 200px;
+}
