@@ -35,7 +35,6 @@ export class HttpRequestExamplesComponent {
       return response;
     })
   );
-  // catFact$: Observable<CatFact> = this.catFactService.getCatFact();
 
   // pipes en maps e.d. niet nodig als je niets speciaals met de response doet
   eenmaligeDogImage$: Observable<DogImage> = this.dogImageService.getDogImage();
